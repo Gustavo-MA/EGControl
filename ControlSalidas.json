@@ -1,0 +1,472 @@
+[
+    {
+        "id": "8d9ba1669bf20359",
+        "type": "tab",
+        "label": "Control desalidas Motor",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4a45664ed05b5d24",
+        "type": "debug",
+        "z": "8d9ba1669bf20359",
+        "name": "debug 18",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 320,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "ab7391bf2064a947",
+        "type": "keypress",
+        "z": "8d9ba1669bf20359",
+        "key": "p",
+        "x": 100,
+        "y": 120,
+        "wires": [
+            [
+                "d7a6fbd4f066f90f",
+                "796f61075a84dae4"
+            ]
+        ],
+        "outputLabels": [
+            "Hola"
+        ]
+    },
+    {
+        "id": "d7a6fbd4f066f90f",
+        "type": "function",
+        "z": "8d9ba1669bf20359",
+        "name": "function 7",
+        "func": "msg.payload=msg.payload.keypress;\nif(msg.payload==\"p\")\nmsg.payload=\"Se preciono la tecla P\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 160,
+        "y": 240,
+        "wires": [
+            [
+                "4a45664ed05b5d24"
+            ]
+        ]
+    },
+    {
+        "id": "796f61075a84dae4",
+        "type": "ui_ui_control",
+        "z": "8d9ba1669bf20359",
+        "name": "",
+        "events": "all",
+        "x": 300,
+        "y": 120,
+        "wires": [
+            [
+                "4a45664ed05b5d24"
+            ]
+        ]
+    },
+    {
+        "id": "108b5f29da3bc027",
+        "type": "keypress",
+        "z": "8d9ba1669bf20359",
+        "key": "{key: \"a\" }",
+        "x": 230,
+        "y": 460,
+        "wires": [
+            [
+                "6eb2a372c6691464"
+            ]
+        ]
+    },
+    {
+        "id": "6eb2a372c6691464",
+        "type": "debug",
+        "z": "8d9ba1669bf20359",
+        "name": "debug 19",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "696933a9917c9ec8",
+        "type": "ui_button",
+        "z": "8d9ba1669bf20359",
+        "name": "",
+        "group": "cd1d4a7c638cc2d6",
+        "order": 2,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "Arriba",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 630,
+        "y": 100,
+        "wires": [
+            [
+                "ff9c9b6c34edc92f"
+            ]
+        ]
+    },
+    {
+        "id": "c9229d2a8a0ff126",
+        "type": "ui_button",
+        "z": "8d9ba1669bf20359",
+        "name": "",
+        "group": "cd1d4a7c638cc2d6",
+        "order": 5,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Izquierda",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 520,
+        "y": 180,
+        "wires": [
+            [
+                "68aa5059da25c75e"
+            ]
+        ]
+    },
+    {
+        "id": "2d1d3299029d6c0e",
+        "type": "ui_button",
+        "z": "8d9ba1669bf20359",
+        "name": "",
+        "group": "cd1d4a7c638cc2d6",
+        "order": 10,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "Abajo",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 650,
+        "y": 300,
+        "wires": [
+            [
+                "ccefd54f245e50eb"
+            ]
+        ]
+    },
+    {
+        "id": "cd6a03e034c35c25",
+        "type": "ui_button",
+        "z": "8d9ba1669bf20359",
+        "name": "",
+        "group": "cd1d4a7c638cc2d6",
+        "order": 7,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Derecha",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 760,
+        "y": 200,
+        "wires": [
+            [
+                "bcaaa58b5e99b1ce",
+                "177be606cc949547"
+            ]
+        ]
+    },
+    {
+        "id": "ff9c9b6c34edc92f",
+        "type": "function",
+        "z": "8d9ba1669bf20359",
+        "name": "FArriba",
+        "func": "msg.payload=\"Up\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 100,
+        "wires": [
+            [
+                "257a2103f931c86d",
+                "177be606cc949547",
+                "f3db3f95ae90215a"
+            ]
+        ]
+    },
+    {
+        "id": "bcaaa58b5e99b1ce",
+        "type": "function",
+        "z": "8d9ba1669bf20359",
+        "name": "FDerecha",
+        "func": "msg.payload=\"Right\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1140,
+        "y": 240,
+        "wires": [
+            [
+                "257a2103f931c86d",
+                "177be606cc949547",
+                "f3db3f95ae90215a"
+            ]
+        ]
+    },
+    {
+        "id": "68aa5059da25c75e",
+        "type": "function",
+        "z": "8d9ba1669bf20359",
+        "name": "FIzquierda",
+        "func": "msg.payload = \"Left\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 260,
+        "wires": [
+            [
+                "257a2103f931c86d",
+                "177be606cc949547",
+                "f3db3f95ae90215a"
+            ]
+        ]
+    },
+    {
+        "id": "ccefd54f245e50eb",
+        "type": "function",
+        "z": "8d9ba1669bf20359",
+        "name": "FAbajo",
+        "func": "msg.payload = \"Down\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 340,
+        "wires": [
+            [
+                "257a2103f931c86d",
+                "177be606cc949547",
+                "f3db3f95ae90215a"
+            ]
+        ]
+    },
+    {
+        "id": "257a2103f931c86d",
+        "type": "ui_text",
+        "z": "8d9ba1669bf20359",
+        "group": "cd1d4a7c638cc2d6",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Movimientos:",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 1410,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "177be606cc949547",
+        "type": "mqtt out",
+        "z": "8d9ba1669bf20359",
+        "name": "",
+        "topic": "Control/Mqtt/Motor",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "dbb2841f278f706f",
+        "x": 1430,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "f3db3f95ae90215a",
+        "type": "debug",
+        "z": "8d9ba1669bf20359",
+        "name": "Res-Debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1410,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "ba5210c0901f1b60",
+        "type": "ui_spacer",
+        "z": "8d9ba1669bf20359",
+        "name": "spacer",
+        "group": "cd1d4a7c638cc2d6",
+        "order": 1,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "e43950198ae958c0",
+        "type": "ui_spacer",
+        "z": "8d9ba1669bf20359",
+        "name": "spacer",
+        "group": "cd1d4a7c638cc2d6",
+        "order": 3,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "bf57ae8fb30a0ea9",
+        "type": "ui_spacer",
+        "z": "8d9ba1669bf20359",
+        "name": "spacer",
+        "group": "cd1d4a7c638cc2d6",
+        "order": 4,
+        "width": 8,
+        "height": 1
+    },
+    {
+        "id": "a8d01c3a656612f9",
+        "type": "ui_spacer",
+        "z": "8d9ba1669bf20359",
+        "name": "spacer",
+        "group": "cd1d4a7c638cc2d6",
+        "order": 6,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "d2b2639182248b6d",
+        "type": "ui_spacer",
+        "z": "8d9ba1669bf20359",
+        "name": "spacer",
+        "group": "cd1d4a7c638cc2d6",
+        "order": 8,
+        "width": 8,
+        "height": 1
+    },
+    {
+        "id": "5e736a7f69757060",
+        "type": "ui_spacer",
+        "z": "8d9ba1669bf20359",
+        "name": "spacer",
+        "group": "cd1d4a7c638cc2d6",
+        "order": 9,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "ce6e1de0ec12ee66",
+        "type": "ui_spacer",
+        "z": "8d9ba1669bf20359",
+        "name": "spacer",
+        "group": "cd1d4a7c638cc2d6",
+        "order": 11,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "cd1d4a7c638cc2d6",
+        "type": "ui_group",
+        "name": "Botones",
+        "tab": "625b45507c6582d2",
+        "order": 1,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "dbb2841f278f706f",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "625b45507c6582d2",
+        "type": "ui_tab",
+        "name": "Control",
+        "icon": "dashboard",
+        "order": 14,
+        "disabled": false,
+        "hidden": false
+    }
+]
